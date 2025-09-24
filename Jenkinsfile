@@ -8,12 +8,11 @@ pipeline {
     CLUSTER_REGION = "europe-west9"
     K8S_DIR = "frontend"
   }
-  
+
   stages {
     stage('Checkout') {
       steps {
-          git branch: 'main', url: "https://github.com/saleem-td/gcp-chatbot-frontend.git"
-        }
+        git branch: 'main', url: "https://github.com/saleem-td/gcp-chatbot-frontend.git"
       }
     }
 
@@ -53,3 +52,4 @@ pipeline {
       }
     }
   }
+}
