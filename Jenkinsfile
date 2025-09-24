@@ -12,9 +12,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        withCredentials([string(credentialsId: 'github-pat', variable: 'GITHUB_TOKEN')]) {
-          git branch: 'main',
-              url: "https://$GITHUB_TOKEN@github.com/saleem-td/gcp-chatbot-frontend.git"
+          git branch: 'main', url: "https://github.com/saleem-td/gcp-chatbot-frontend.git"
         }
       }
     }
